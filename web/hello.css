@@ -1,0 +1,39 @@
+/* This holds everything. Margin 0 to remove white borders on webpage edges */
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	min-height: 100vh;
+	background: #1d1e22;
+}
+
+/* This is the header specifications */
+header{
+	display: block;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-family: CASTELLAR;
+	color: #be4f0c;
+	background: #393f4d;
+	border-radius: 1em;
+}
+
+/* This is a flexbox that holds all of the main content */
+main {
+    display: flex;
+    flex: 1 0 auto;
+    padding: 1.5em;
+	overflow-x: hidden;
+	align-items: center;
+	justify-content: center;
+}
+
+/* I like footers */
+footer {
+	display: block;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: slategrey;
+}
