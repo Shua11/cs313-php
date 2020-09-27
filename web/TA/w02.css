@@ -1,0 +1,21 @@
+/* .div1 {
+    font-size: medium;
+    background-color: blue;
+}
+.div2 {
+    font-size: medium;
+    background-color: aquamarine;
+}
+.div3 {
+    font-size: medium;
+    background-color: #f0d74c;
+} */
+.div1:hover {
+    font-weight: bold;
+}
+.div2:hover {
+    font-weight: bold;
+}
+.div3:hover {
+    font-weight: bold;
+}
