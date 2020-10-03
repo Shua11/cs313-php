@@ -55,8 +55,19 @@ session_start();
             </div>
             <div class="container bg-light py-3 rounded">
                 <h2>Order Details</h2>
-                <p>Name: John Doe</p>
-                <p>Address: 12345 Main St. Rexburg, ID 83440</p>
+                <p>
+                <?php 
+                $fname = htmlspecialchars($_POST['fname']);
+                $lname = htmlspecialchars($_POST['lname']);
+                $a1 = htmlspecialchars($_POST['address1']);
+                $a2 = htmlspecialchars($_POST['address2']);
+                $city = htmlspecialchars($_POST['city']);
+                $state = htmlspecialchars($_POST['state']);
+                $zip = htmlspecialchars($_POST['zip']);
+                echo "Name: " . $fname . " " . $lname ."<br>";
+                echo "Address: " . $a1 . " " . $a2 . ", " . $city . ", " . $state . $zip; 
+                ?>
+                </p>
                 <p>Items:</p>
                 <?php 
                 if (isset($_SESSION['bathBomb']) && !empty($_SESSION['bathBomb'])) {

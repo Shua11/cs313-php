@@ -73,29 +73,29 @@ session_start();
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="fname">First Name</label>
-                        <input type="text" class="form-control" id="fname" placeholder="Enter first name" required>
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter first name" required>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="lname">Last Name</label>
-                        <input type="text" class="form-control" id="lname" placeholder="Enter last name" required>
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter last name" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+                        <input type="text" class="form-control" name="address1" id="inputAddress" placeholder="1234 Main St" required>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="i.e. Rexburg" required> 
+                        <input type="text" class="form-control" name="city" id="inputCity" placeholder="i.e. Rexburg" required> 
                         </div>
                         <div class="form-group col-md-4">
                         <label for="inputState">State</label>
-                        <select id="inputState" class="form-control" required>
+                        <select id="inputState" class="form-control" name="state" required>
                             <option selected>Choose...</option>
                             <option>AL</option>
                             <option>AK</option>
@@ -150,7 +150,7 @@ session_start();
                         </div>
                         <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="#####" required>
+                        <input type="text" class="form-control" name="zip" id="inputZip" placeholder="#####" required>
                         </div>
                     </div>
                     <div class="form-group">
