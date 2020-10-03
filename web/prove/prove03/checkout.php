@@ -69,7 +69,7 @@ session_start();
                 </div>
             </div>
             <div class="container bg-light py-3 rounded">
-                <form name="chkForm" action="/confirmation.php" onsubmit="return validateForm()" method="post">
+                <form name="chkForm" action="confirmation.php" onsubmit="return validate()" method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="fname">First Name</label>
@@ -162,7 +162,7 @@ session_start();
                         </div>
                     </div>
                     <a href="prove03.php"><button type="button" class="btn btn-info">Continue Shopping</button>
-                    <input type="submit" class="btn btn-success" value="Confirm Checkout">
+                    <button type="submit" id="subm" class="btn btn-success">Confirm Checkout</button>
                 </form>
             </div>
         </div>
