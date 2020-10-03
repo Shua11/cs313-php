@@ -7,7 +7,7 @@ $q = $_REQUEST["q"];
 
 // Add session variable arrays
 if ($q == '1') {
-    $_SESSION["bathBomb"] = array('Bath Bomb', 'images/bathBomb.jpg', '6.99');
+    $_SESSION["bathBomb"] = array('Bath Bomb', 'images/bathbomb.jpg', '6.99');
 }
 if ($q == 2) {
     $_SESSION["showerFizz"] = array('Shower Fizz', 'images/showerfizz.jpg', '7.95');
