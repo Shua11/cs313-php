@@ -1,1 +1,1 @@
-\i myDb.sql
+\i db/myDb.sql
