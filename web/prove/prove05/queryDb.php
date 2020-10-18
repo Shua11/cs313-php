@@ -15,6 +15,11 @@
       $bFeatured = $pRow["bFeatured"];
 
       echo $project_name;
+      echo $project_note;
+      echo $project_description;
+      echo $project_image;
+      echo $project_image_description;
+      echo $bFeatured;
 
       // if ($project_bFeatured == true)
       // {
