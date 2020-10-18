@@ -30,7 +30,7 @@
                         View Project
                      </button>
                   </div>
-               </div>'
+               </div>';
       }
    }
 ?>
