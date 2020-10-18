@@ -14,8 +14,6 @@
       $project_image_description = $pRow["project_image_description"];
       $bFeatured = $pRow["bFeatured"];
 
-      if ($project_bFeatured == true)
-      {
       echo '<div class="card border-dark shadow-lg text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
                   <img src="' . $project_image . '" class="card-img-top" alt="' . $project_image_description . '">
                   <div class="card-body">
@@ -29,9 +27,5 @@
                      </button>
                   </div>
                </div>';
-
-      
-
-      }
    }
 ?>
