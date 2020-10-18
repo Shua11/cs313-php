@@ -14,7 +14,7 @@
       $project_image_description = $pRow["project_image_description"];
       $bFeatured = $pRow["bFeatured"];
 
-      echo '$pRow';
+      echo '$project_name';
 
       // if ($project_bFeatured == true)
       // {
