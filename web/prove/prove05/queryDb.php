@@ -7,7 +7,15 @@
 
    while ($pRow = $project->fetch(PDO::FETCH_ASSOC))
    {
-      echo 'test';
+      $project_name = $pRow["project_name"];
+      $project_note = $pRow["project_note"];
+      $project_description = $pRow["project_description"];
+      $project_image = $pRow["project_image"];
+      $project_image_description = $pRow["project_image_description"];
+      $bFeatured = $pRow["bFeatured"];
+
+      echo '$project_name';
+
       // $project_name = $pRow["project_name"];
       // $project_note = $pRow["project_note"];
       // $project_description = $pRow["project_description"];
