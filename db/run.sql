@@ -1,1 +1,2 @@
-\i db/myDb.sql
+\i myDb.sql
+\i myInsert.sql
