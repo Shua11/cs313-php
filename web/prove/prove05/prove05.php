@@ -71,7 +71,7 @@
    <section class="featProj">
       <div class="container">
          <div class="card-deck">
-            <?php include 'queryDb.php';?>
+            
          </div>
       </div>
    </section>
