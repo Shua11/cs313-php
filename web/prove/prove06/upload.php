@@ -40,8 +40,8 @@ if ($uploadOk == 0) {
    echo '<script>alert("Your file was not uploaded.")</script>';
 // if everything is ok, try to upload file
 } else {
-   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+   // if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+   //    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])) . " has been uploaded.";
 
 
 
@@ -53,7 +53,8 @@ if ($uploadOk == 0) {
       $projectname = htmlspecialchars($projectname);
       $projectnote = htmlspecialchars($projectnote);
       $projectdesc = htmlspecialchars($projectdesc);
-      $imagename = 'uploads/' . htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])); 
+      // $imagename = 'uploads/' . htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])); 
+      $imagename = 'images/Academy-Bridge2-791x1024.jpg'; 
       $imagedesc = htmlspecialchars($imagedesc);
       $chkfeatured = htmlspecialchars($chkfeatured);
 
@@ -76,9 +77,9 @@ if ($uploadOk == 0) {
 
 
 
-   } else {
-      echo "Sorry, there was an error uploading your file.";
-      echo '<script>alert("Sorry, there was an error uploading your file.")</script>';
-   }
+   // } else {
+   //    echo "Sorry, there was an error uploading your file.";
+   //    echo '<script>alert("Sorry, there was an error uploading your file.")</script>';
+   // }
 }
 ?>
