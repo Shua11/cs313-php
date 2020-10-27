@@ -43,6 +43,10 @@
                   {
                      echo '<span style="color:red">Passwords did not match</span>';
                   }
+                  elseif ($_GET["error"]=='passwordcheck')
+                  {
+                     echo '<span style="color:red">Passwords must be > 7 characters and contain at least one #. </span>';
+                  }
                   ?>
                 <div class="inputBox">
                     <input type="submit" name="" value="Create Account">

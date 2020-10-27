@@ -20,12 +20,14 @@ if ($password != $password2)
    die();
 }
 
-if ($password.length < 7)
+if ($password.length < 7 && !preg_match( '~\d~', $password))
 {
    // check if passwords match
-   header("Location: signUp.php?error=small");
+   header("Location: signUp.php?error=passwordcheck");
    die();
 }
+
+if ()
 
 
 // disallow code injection
