@@ -31,7 +31,7 @@
                 </div>
                 <div class="inputBox">
                     <label>Retype Password</label>
-                    <input type="password" id="txtPassword2" name="txtPassword2" name="" placeholder="********"></input>
+                    <input type="password" id="txtPassword2" name="txtPassword2" onblur="testscript()" name="" placeholder="********"></input>
                     <?php 
                      if ($_GET["error"]=='missmatch')
                      { echo '*'; }
@@ -48,6 +48,9 @@
                      echo '<span style="color:red">Passwords must be > 7 characters and contain at least one #. </span>';
                   }
                   ?>
+                  <div>
+                  <span style="color:red" id="txterror"></span>
+                  </div>
                 <div class="inputBox">
                     <input type="submit" name="" value="Create Account">
                 </div>
@@ -56,5 +59,28 @@
         <p class="forgot"> Write Down Your Forgot Your Password.</p>
         <a class="forgot" href="index.php">Cancel</a>
     </div>
+
+    <script>
+    function testscript()
+    {
+         var pass1 = document.getElementById("txtPassword").value;
+         var pass2 = document.getElementById("txtPassword2").value;
+         var error = document.getElementById("txterror");
+         var pattern = /\d/g;
+
+         if (pass1 != pass2)
+         {
+            error.innerHTML = "Missmatched passwords";
+            return;
+         }
+
+         if (pass1.length < 7 || pass1.match(pattern))
+         {
+            error.innerHTML = "Passwords must be > 7 characters and contain at least one #";
+            return;
+         }
+    }
+
+    </script>
 </body>
 </html>
