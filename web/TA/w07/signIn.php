@@ -1,11 +1,9 @@
 <?php
-// modified code from signIn by br. burton
 session_start();
 
 // TODO: Error check in javascript
 if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 {
-	// they have submitted a username and password for us to check
 	$username = $_POST['txtUser'];
 	$password = $_POST['txtPassword'];
 

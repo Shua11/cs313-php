@@ -12,8 +12,8 @@ if (isset($_SESSION['username']))
 <head>
     <title>Undiscovered Beauty</title>
     <meta charset="utf-8">
-    <meta name="application-name" content="Project1">
-    <meta name="description" content="Create a robust shopping web application.">
+    <meta name="application-name" content="TeamActivity07">
+    <meta name="description" content="Create a signin web application.">
     <meta name="img" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--bootstrap stylesheet-->
@@ -22,11 +22,10 @@ if (isset($_SESSION['username']))
     <!--google fonts: nanum gothic-->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body>
     <!--header and navbar-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -71,7 +70,6 @@ if (isset($_SESSION['username']))
                                 <ul class='dropdown-menu dropdown-cart' role='menu'>
                                     <li class='text-center'>Your Shopping Cart</li>
                                     <hr />";
-                        // include 'displayCart.php';
                         echo "<hr />
                                     <li class='text-center'><a href='#'>Checkout</a></li>
                                 </ul>
@@ -159,12 +157,6 @@ if (isset($_SESSION['username']))
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        $(document).scroll(function () {
-            $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
-        });
-    </script>
 </body>
 
 </html>
