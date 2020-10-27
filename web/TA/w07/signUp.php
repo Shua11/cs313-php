@@ -26,6 +26,10 @@
                     <input type="password" id="txtPassword" name="txtPassword" name="" placeholder="********"></input>
                 </div>
                 <div class="inputBox">
+                    <label>Retype Password</label>
+                    <input type="password" id="txtPassword2" name="txtPassword2" name="" placeholder="********"></input>
+                </div>
+                <div class="inputBox">
                     <input type="submit" name="" value="Create Account">
                 </div>
             </div>

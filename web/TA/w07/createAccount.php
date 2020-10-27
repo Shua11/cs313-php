@@ -1,14 +1,32 @@
 <?php
 $username = $_POST['txtUser'];
 $password = $_POST['txtPassword'];
+$password2 = $_POST['txtPassword2'];
 
 // Check for a username and password
-if (!isset($username) || $username == "" || !isset($password) || $password == "")
+if (!isset($username) || $username == "" 
+|| !isset($password) || $password == "" 
+|| !isset($password2) || $password2 == "")
 {
    // If there isn't a username or password, then go back
 	header("Location: signUp.php");
 	die();
 }
+
+if ($password != $password2)
+{
+   // check if passwords match
+   header("Location: signUp.php?error=missmatch");
+   die();
+}
+
+if ($password.length < 7)
+{
+   // check if passwords match
+   header("Location: signUp.php?error=small");
+   die();
+}
+
 
 // disallow code injection
 $username = htmlspecialchars($username);
@@ -31,4 +49,5 @@ $statement->execute();
 // redirect 
 header("Location: signIn.php");
 die();
+
 ?>
