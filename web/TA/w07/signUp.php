@@ -41,7 +41,7 @@
                   <?php 
                   if ($_GET["error"]=='missmatch')
                   {
-                     echo '<span color="red">Passwords did not match</span>';
+                     echo '<span style="color:red">Passwords did not match</span>';
                   }
                   ?>
                 <div class="inputBox">
