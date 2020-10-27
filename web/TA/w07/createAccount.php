@@ -27,9 +27,6 @@ if ($password.length < 7 && !preg_match( '~\d~', $password))
    die();
 }
 
-if ()
-
-
 // disallow code injection
 $username = htmlspecialchars($username);
 
