@@ -24,11 +24,26 @@
                 <div class="inputBox">
                     <label>Password</label>
                     <input type="password" id="txtPassword" name="txtPassword" name="" placeholder="********"></input>
+                    <?php 
+                     if ($_GET["error"]=='missmatch')
+                     { echo '*'; }
+                     ?>
                 </div>
                 <div class="inputBox">
                     <label>Retype Password</label>
                     <input type="password" id="txtPassword2" name="txtPassword2" name="" placeholder="********"></input>
+                    <?php 
+                     if ($_GET["error"]=='missmatch')
+                     { echo '*'; }
+                     ?>
                 </div>
+
+                  <?php 
+                  if ($_GET["error"]=='missmatch')
+                  {
+                     echo '<span color=red>Passwords did not match</span>';
+                  }
+                  ?>
                 <div class="inputBox">
                     <input type="submit" name="" value="Create Account">
                 </div>
