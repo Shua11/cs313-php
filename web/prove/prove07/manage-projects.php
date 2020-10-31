@@ -106,7 +106,7 @@ if (isset($_SESSION['username']))
          <div>
                <h2>Add a Project</h2>
                <a class="btn btn-primary btn-lg" href="addproject.php"
-               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Add Project</a>
+               target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Opens in new tab">Add Project</a>
          </div>
       </div>
    </div>
@@ -118,9 +118,9 @@ if (isset($_SESSION['username']))
          <div>
             <h2>Edit/Delete a Project</h2>
             <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="right" title="Edit the selected project">Edit Project</a>
+               role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
             <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="right" title="Delete the selected project">Delete Project</a>
+               role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
          </div>
       </div>
    </div>
