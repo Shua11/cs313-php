@@ -49,14 +49,20 @@ if ($uploadOk == 0) {
       $projectnote = $_POST['pnote'];
       $projectdesc = $_POST['pdesc'];
       $imagedesc = $_POST['idesc'];
-      $chkfeatured = $_POST['chkbox'];
+
+      if (isset($_POST['chkbox']) && $_POST['chkbox'] == 'Yes')
+      {
+         $chkfeatured = 'Yes';
+      } else {
+         $chkfeatured = 'No';
+      }
+
       $projectname = htmlspecialchars($projectname);
       $projectnote = htmlspecialchars($projectnote);
       $projectdesc = htmlspecialchars($projectdesc);
       // $imagename = 'uploads/' . htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])); 
-      $imagename = 'images/Academy-Bridge2-791x1024.jpg'; 
+      $imagename = 'https://via.placeholder.com/512x512.png?text=Image+Upload+Unavailable'; 
       $imagedesc = htmlspecialchars($imagedesc);
-      $chkfeatured = htmlspecialchars($chkfeatured);
 
       require("dbConnect.php");
       $db = get_db();
