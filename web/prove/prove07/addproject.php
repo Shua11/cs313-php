@@ -108,6 +108,9 @@ if (isset($_SESSION['username']))
       </div>
    </section>
 
+   <br>
+   <br>
+
    <!-- Main body container -->
    <div class="container">
       <!-- Contact us form -->
