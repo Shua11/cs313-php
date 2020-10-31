@@ -29,7 +29,7 @@ if (isset($_POST['inputSelect']))
       $project_description = $pRow["project_description"];
       $project_image = $pRow["project_image"];
       $project_image_description = $pRow["project_image_description"];
-      $bFeatured = $pRow["bFeatured"];
+      $bFeatured = $pRow["bfeatured"];
    }
 }
 ?>
