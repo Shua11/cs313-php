@@ -69,7 +69,7 @@ if (isset($_SESSION['username']))
                      else
                      {
                         echo '<li class="nav-item float-right"> 
-                        <span class="navbar-text float-right btn-color">Welcome ' . $username  . '
+                        <span class="navbar-text float-right btn-color align-middle">Welcome ' . $username  . '
                         <a class="nav-link btn-color float-right" href="signOut.php">Sign Out</a>
                         </span></li>';
                      }

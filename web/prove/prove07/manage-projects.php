@@ -33,7 +33,52 @@ if (isset($_SESSION['username']))
 </head>
 
 <body data-spy="scroll" data-target=".navbar" onload="onload();">
-
+<header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="#"><img src="./images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-lg-auto">
+                  <li class="nav-item">
+                     <a href="#" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
+                  </li>
+                  <?php
+                     if (isset($username) || !$username == "")
+                     { echo '<li class="nav-item">
+                        <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100">Manage Projects</a>
+                     </li>';
+                     }
+                  ?>
+                  <?php
+                     if (!isset($username) || $username == "")
+                     { echo '<li class="nav-item float-right">
+                        <span class="float-right btn-color align-middle">Login to make project changes: 
+                        <div>
+                           <a class="nav-link btn-color float-left" href="signIn.php">Login</a>
+                           <a class="nav-link btn-color float-right" href="signUp.php">Register</a>
+                        </div>
+                        </span></li>';
+                     }
+                     else
+                     {
+                        echo '<li class="nav-item float-right"> 
+                        <span class="navbar-text float-right btn-color align-middle">Welcome ' . $username  . '
+                        <a class="nav-link btn-color float-right" href="signOut.php">Sign Out</a>
+                        </span></li>';
+                     }
+                  ?>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
 
    <div class="jumbotron jumbotron-fluid banner2 tranparent">
    </div>
