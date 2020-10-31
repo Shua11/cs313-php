@@ -8,13 +8,13 @@ if (isset($_POST['inputGroupSelect']))
    echo $selected;
 
     // Connect to the DB
-	require "dbConnect.php";
-	$db = get_db();
-	$query = 'DELETE FROM project WHERE project_name=:selected';
+	// require "dbConnect.php";
+	// $db = get_db();
+	// $query = 'DELETE FROM project WHERE project_name=:selected';
 
-	$statement = $db->prepare($query);
-	$statement->bindValue(':selected', $selected);
-	$result = $statement->execute();
+	// $statement = $db->prepare($query);
+	// $statement->bindValue(':selected', $selected);
+	// $result = $statement->execute();
 
 	// if ($result)
 	// {

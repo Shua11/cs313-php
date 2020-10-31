@@ -117,18 +117,20 @@ if (isset($_SESSION['username']))
       <div class="jumbotron tranparent8">
          <div>
             <h2>Edit/Delete a Project</h2>
-            <div class="input-group">
-               <select class="custom-select custom-select-lg" id="inputGroupSelect04">
-                  <option selected>Choose...</option>
-                  <?php include 'queryDbDropdown.php';?>
-               </select>
-               <div class="input-group-append">
-                  <a class="btn btn-primary btn-lg" href=""
-                  role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-                  <a class="btn btn-danger btn-lg" href=""
-                  role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
-               </div>
+            <form method="post" id="form1">
+               <div class="input-group">
+                  <select class="custom-select custom-select-lg" id="inputGroupSelect">
+                     <option selected>Choose...</option>
+                     <?php include 'queryDbDropdown.php';?>
+                  </select>
+                  <div class="input-group-append">
+                     <a class="btn btn-primary btn-lg" onclick="submitForm('page1.php')"
+                     role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
+                     <a class="btn btn-danger btn-lg" onclick="submitForm('delete.php')"
+                     role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
+                  </div>
             </div>
+            </form>
          </div>
       </div>
    </div>
@@ -168,6 +170,12 @@ if (isset($_SESSION['username']))
       $(function () {
          $('[data-toggle="tooltip"]').tooltip()
       });
+
+      function submitForm(action) {
+         var form = document.getElementById('form1');
+         form.action = action;
+         form.submit();
+      }
    </script>
 </body>
 
