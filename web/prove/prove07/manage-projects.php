@@ -117,10 +117,10 @@ if (isset($_SESSION['username']))
       <div class="jumbotron tranparent8 shift-down">
          <div>
             <h2>Edit/Delete a Project</h2>
-            <a class="btn btn-primary btn-lg" href="./pdf/More-Information-about-the-services-we-offer.pdf"
-               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Edit Project</a>
-            <a class="btn btn-primary btn-lg" href="./pdf/More-Information-about-the-services-we-offer.pdf"
-               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Edit Project</a>
+            <a class="btn btn-primary btn-lg" href=""
+               role="button" data-toggle="tooltip" data-placement="right" title="Edit the selected project">Edit Project</a>
+            <a class="btn btn-primary btn-lg" href=""
+               role="button" data-toggle="tooltip" data-placement="right" title="Delete the selected project">Delete Project</a>
          </div>
       </div>
    </div>
@@ -155,6 +155,10 @@ if (isset($_SESSION['username']))
       $(document).scroll(function () {
          $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
          $('.navbar-brand').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+      });
+
+      $(function () {
+         $('[data-toggle="tooltip"]').tooltip()
       });
    </script>
 </body>
