@@ -158,9 +158,9 @@ if (isset($_POST['inputSelect']))
                         <div class="input-group-prepend">
                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                         </div> -->
-                     <label for="fileToUpload">Project Image:</label>
+                     <label for="fileToUpload">Project Image: value="<?php echo 'Previous Image: ' . $project_image; ?>"</label>
                      <div class="custom-file">
-                        <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload" value="<?php echo $project_image; ?>" 
+                        <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload"  
                            aria-describedby="fileToUpload" required>
                         <label class="custom-file-label" for="fileToUpload">Choose image</label>
                      </div>
@@ -176,12 +176,12 @@ if (isset($_POST['inputSelect']))
 
                   <div class="form-group form-check">
                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="chkbox" value="<?php echo $bFeatured; ?>" > Featured project.
+                        <input class="form-check-input" type="checkbox" name="chkbox" <?php if ($bFeatured) {echo 'checked=“checked”';} ?> > Featured project.
                         <div class="valid-feedback">Valid.</div>
                      </label>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
-                  <a class="btn btn-secondary btn-lg" href="manage-projects.php"
+                  <a class="btn btn-secondary" href="manage-projects.php"
                   role="button" data-toggle="tooltip" data-placement="right" title="Go back to Manage Projects">Cancel</a>
                </form>
             </div>
