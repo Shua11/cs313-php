@@ -1,11 +1,15 @@
 <?php
 session_start();
 
+$selected = $_POST['inputGroupSelect'];
+   
+echo $selected;
+
 if (isset($_POST['inputGroupSelect']))
 {
    $selected = $_POST['inputGroupSelect'];
    
-   echo $selected;
+   echo ' isset';
 
     // Connect to the DB
 	// require "dbConnect.php";
