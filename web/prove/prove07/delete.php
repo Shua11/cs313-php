@@ -3,7 +3,9 @@ session_start();
 
 if (isset($_POST['inputGroupSelect']))
 {
-	$selected = $_POST['inputGroupSelect'];
+   $selected = $_POST['inputGroupSelect'];
+   
+   echo $selected;
 
     // Connect to the DB
 	require "dbConnect.php";
@@ -14,10 +16,10 @@ if (isset($_POST['inputGroupSelect']))
 	$statement->bindValue(':selected', $selected);
 	$result = $statement->execute();
 
-	if ($result)
-	{
-      header("Location: manage-projects.php");
-      die();
-	}
+	// if ($result)
+	// {
+   //    header("Location: manage-projects.php");
+   //    die();
+	// }
 }
 ?>
