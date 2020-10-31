@@ -119,7 +119,7 @@ if (isset($_SESSION['username']))
             <h2>Edit/Delete a Project</h2>
             <form method="post" id="form1">
                <div class="input-group">
-                  <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect">
+                  <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect" required>
                      <option selected>Choose...</option>
                      <?php include 'queryDbDropdown.php';?>
                   </select>

@@ -158,7 +158,7 @@ if (isset($_POST['inputSelect']))
                         <div class="input-group-prepend">
                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                         </div> -->
-                     <label for="fileToUpload">Project Image: <?php echo 'Previous Image: ' . $project_image; ?></label>
+                     <label for="fileToUpload">Project Image: <?php echo '(Previous Image: ' . $project_image . ')'; ?></label>
                      <div class="custom-file">
                         <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload"  
                            aria-describedby="fileToUpload" required>
@@ -180,7 +180,7 @@ if (isset($_POST['inputSelect']))
                         <div class="valid-feedback">Valid.</div>
                      </label>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bpttom" title="Submit project changes">Submit</button>
                   <a class="btn btn-secondary" href="manage-projects.php"
                   role="button" data-toggle="tooltip" data-placement="right" title="Go back to Manage Projects">Cancel</a>
                </form>
