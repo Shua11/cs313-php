@@ -57,7 +57,7 @@
             </div>
         </form>
         <p class="forgot"> Write Down Your Forgot Your Password.</p>
-        <a class="forgot" href="index.php">Cancel</a>
+        <a class="forgot" href="prove07.php">Cancel</a>
     </div>
 
     <script>

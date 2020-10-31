@@ -2,6 +2,6 @@
 session_start();
 unset($_SESSION['username']);
 
-header("Location: index.php");
+header("Location: prove07.php");
 die();
 ?>

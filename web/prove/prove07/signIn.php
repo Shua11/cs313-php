@@ -24,7 +24,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
 			$_SESSION['username'] = $username;
-			header("Location: index.php");
+			header("Location: prove07.php");
 			die();
 		}
 	}
@@ -61,7 +61,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
         </form>
         <p class="create"><a href="signUp.php">Click</a> to Create New Account</p>
         <p class="forgot"> Don't Forgot Your Password.</p>
-        <a href="index.php">Cancel</a>
+        <a href="prove07.php">Cancel</a>
     </div>
 </body>
 </html>
