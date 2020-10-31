@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
       $projectdesc = $_POST['pdesc'];
       $imagedesc = $_POST['idesc'];
 
-      if (isset($_POST['chkbox']) && $_POST['chkbox'] == 'Yes')
+      if (isset($_POST['chkbox']))
       {
          $chkfeatured = 'Yes';
       } else {
