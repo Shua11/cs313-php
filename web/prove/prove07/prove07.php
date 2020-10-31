@@ -59,10 +59,10 @@ if (isset($_SESSION['username']))
                   <?php
                      if (!isset($username) || $username == "")
                      { echo '<li class="nav-item">
-                        <p class="float-right btn-color">Login to make project changes: 
-                        <a class="nav-link btn-color" href="signIn.php">Login</a> 
-                        <a class="nav-link btn-color" href="signUp.php">Register</a>
-                        </p></li>';
+                        <span class="float-right btn-color">Login to make project changes: 
+                        <a class="nav-link btn-color float-left" href="signIn.php">Login</a> 
+                        <a class="nav-link btn-color float-right" href="signUp.php">Register</a>
+                        </span></li>';
                      }
                      else
                      {
