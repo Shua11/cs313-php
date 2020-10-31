@@ -173,8 +173,12 @@ if (isset($_SESSION['username']))
 
       function submitForm(action) {
          var form = document.getElementById('form1');
-         form.action = action;
-         form.submit();
+         var selected = document.getElementById('inputGroupSelect');
+         if (selected != "")
+         {
+            form.action = action;
+            form.submit();
+         }
       }
    </script>
 </body>
