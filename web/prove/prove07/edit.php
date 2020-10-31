@@ -30,6 +30,7 @@ if (isset($_POST['inputSelect']))
       $project_image = $pRow["project_image"];
       $project_image_description = $pRow["project_image_description"];
       $bFeatured = $pRow["bFeatured"];
+   }
 }
 ?>
 
@@ -59,7 +60,7 @@ if (isset($_POST['inputSelect']))
 </head>
 
 <body data-spy="scroll" data-target=".navbar" onload="onload();">
-<header>
+   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
          <div class="container">
             <a class="navbar-brand" href="prove07.php"><img src="./images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
