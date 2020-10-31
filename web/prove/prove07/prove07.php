@@ -105,7 +105,7 @@ if (isset($_SESSION['username']))
          <div class="container-sm">
             <img class="sba" src="./images/8a-logo.jpg">
             <p>More information about the services we offer</p>
-            <a class="btn btn-primary btn-lg" href="/pdf/More-Information-about-the-services-we-offer.pdf"
+            <a class="btn btn-primary btn-lg" href="./pdf/More-Information-about-the-services-we-offer.pdf"
                target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Learn
                more</a>
          </div>
@@ -160,6 +160,10 @@ if (isset($_SESSION['username']))
       $(document).scroll(function () {
          $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
          $('.navbar-brand').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+      });
+      
+      $(function () {
+         $('[data-toggle="tooltip"]').tooltip()
       });
    </script>
 </body>

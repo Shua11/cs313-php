@@ -96,6 +96,9 @@ if (isset($_SESSION['username']))
       </div>
    </section>
 
+   <div class="jumbotron jumbotron-fluid banner2 tranparent">
+   </div>
+
    <!-- Main body container -->
    <div class="container">
       <!-- Contact us form -->
