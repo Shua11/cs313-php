@@ -119,7 +119,7 @@ if (isset($_SESSION['username']))
             <h2>Edit/Delete a Project</h2>
             <form method="post" id="form1">
                <div class="input-group">
-                  <select class="custom-select custom-select-lg" id="inputGroupSelect">
+                  <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect">
                      <option selected>Choose...</option>
                      <?php include 'queryDbDropdown.php';?>
                   </select>
@@ -129,7 +129,7 @@ if (isset($_SESSION['username']))
                      <a class="btn btn-danger btn-lg" onclick="submitForm('delete.php')"
                      role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
                   </div>
-            </div>
+               </div>
             </form>
          </div>
       </div>
