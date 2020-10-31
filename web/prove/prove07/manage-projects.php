@@ -120,7 +120,7 @@ if (isset($_SESSION['username']))
             <form method="post" id="form1">
                <div class="input-group">
                   <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect" required>
-                     <option value="" selected>Choose...</option>
+                     <option value="0" selected>Choose...</option>
                      <?php include 'queryDbDropdown.php';?>
                   </select>
                   <div class="input-group-append">
@@ -173,8 +173,8 @@ if (isset($_SESSION['username']))
 
       function submitForm(action) {
          var form = document.getElementById('form1');
-         var selected = document.getElementById('inputGroupSelect');
-         if (selected != "" || selected != null)
+         var selected = document.getElementById('inputGroupSelect').value;
+         if (selected != "0")
          {
             alert(selected);
             // form.action = action;
