@@ -168,6 +168,8 @@ if (isset($_SESSION['username']))
                      </label>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
+                  <a class="btn btn-secondary btn-lg" href="manage-projects.php"
+                  role="button" data-toggle="tooltip" data-placement="right" title="Go back to Manage Projects">Cancel</a>
                </form>
             </div>
          </div>

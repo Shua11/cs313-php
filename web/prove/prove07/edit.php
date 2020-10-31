@@ -135,19 +135,19 @@ if (isset($_POST['inputSelect']))
                <form action="upload.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                   <div class="form-group">
                      <label for="uname">Project Name:</label>
-                     <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" value="<?php echo $project_name; ?>"required>
+                     <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" value="<?php echo $project_name; ?>" required>
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                   <div class="form-group">
                      <label for="pnote">Project Note:</label>
-                     <input type="text" class="form-control" id="pnote" placeholder="Enter project note" name="pnote" required>
+                     <input type="text" class="form-control" id="pnote" placeholder="Enter project note" name="pnote" value="<?php echo $project_note; ?>" required>
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                   <div class="form-group">
                      <label for="pdesc">Project Description:</label>
-                     <input type="textarea" class="form-control" id="pdesc" placeholder="Enter project description" name="pdesc"
+                     <input type="textarea" class="form-control" id="pdesc" placeholder="Enter project description" name="pdesc" value="<?php echo $project_description; ?>" 
                         required>
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
@@ -160,7 +160,7 @@ if (isset($_POST['inputSelect']))
                         </div> -->
                      <label for="fileToUpload">Project Image:</label>
                      <div class="custom-file">
-                        <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload"
+                        <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload" value="<?php echo $project_image; ?>" 
                            aria-describedby="fileToUpload" required>
                         <label class="custom-file-label" for="fileToUpload">Choose image</label>
                      </div>
@@ -168,7 +168,7 @@ if (isset($_POST['inputSelect']))
 
                   <div class="form-group">
                      <label for="idesc">Project Image Description:</label>
-                     <input type="text" class="form-control" id="idesc" placeholder="Enter project image description"
+                     <input type="text" class="form-control" id="idesc" placeholder="Enter project image description" value="<?php echo $project_image_description; ?>" 
                         name="idesc" required>
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
@@ -176,11 +176,13 @@ if (isset($_POST['inputSelect']))
 
                   <div class="form-group form-check">
                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="chkbox" > Featured project.
+                        <input class="form-check-input" type="checkbox" name="chkbox" value="<?php echo $bFeatured; ?>" > Featured project.
                         <div class="valid-feedback">Valid.</div>
                      </label>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
+                  <a class="btn btn-secondary btn-lg" href="manage-projects.php"
+                  role="button" data-toggle="tooltip" data-placement="right" title="Go back to Manage Projects">Cancel</a>
                </form>
             </div>
          </div>
