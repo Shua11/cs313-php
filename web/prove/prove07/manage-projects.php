@@ -118,25 +118,19 @@ if (isset($_SESSION['username']))
          <div>
             <h2>Edit/Delete a Project</h2>
             <div class="input-group">
-            <select class="custom-select" id="inputGroupSelect04">
-               <option selected>Choose...</option>
-               <option value="1">One</option>
-               <option value="2">Two</option>
-               <option value="3">Three</option>
-            </select>
-            <div class="input-group-append">
-               <button class="btn btn-outline-secondary" type="button">Edit Project</button>
-               <button class="btn btn-outline-secondary" type="button">Button</button>
-               <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-            <a class="btn btn-danger btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
+               <select class="custom-select" id="inputGroupSelect04">
+                  <option selected>Choose...</option>
+                  <?php include 'queryDbDropdown.php';?>
+               </select>
+               <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">Edit Project</button>
+                  <button class="btn btn-outline-secondary" type="button">Button</button>
+                  <a class="btn btn-primary btn-lg" href=""
+                  role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
+               <a class="btn btn-danger btn-lg" href=""
+                  role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
+               </div>
             </div>
-            </div>
-            <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-            <a class="btn btn-danger btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
          </div>
       </div>
    </div>
