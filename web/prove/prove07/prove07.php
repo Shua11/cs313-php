@@ -56,24 +56,27 @@ if (isset($_SESSION['username']))
                      </li>';
                      }
                   ?>
-                  
+                  <?php
+                     if (!isset($username) || $username == "")
+                     { echo '<li class="nav-item">
+                        <span class="float-right">Login to make project changes: <a class="nav-link" href="signIn.php">Login</a> <a class="nav-link" href="signUp.php">Register</a>
+                        </span></li>';
+                     }
+                     else
+                     {
+                        echo '<li class="nav-item"> 
+                        <span class="navbar-text">Welcome $username 
+                        <a href="signOut.php">Sign Out</a>
+                        </span></li>';
+                     }
+                  ?>
                </ul>
             </div>
          </div>
       </nav>
    </header>
 
-   <?php
-      if (!isset($username) || $username == "")
-      { echo '<span class="float-right">Login to make project changes: <a class="nav-link" href="signIn.php">Login</a> <a class="nav-link" href="signUp.php">Register</a>
-            </span>';
-      }
-      else
-      {
-         echo "<span class='navbar-text'>Welcome $username 
-               <a href='signOut.php'>Sign Out</a></span>";
-      }
-   ?>
+   
 
 
    <!-- Spacing -->
