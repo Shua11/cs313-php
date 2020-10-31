@@ -173,7 +173,7 @@ if (isset($_POST['inputSelect']))
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
-
+                  <?php echo $bFeatured ?>
                   <div class="form-group form-check">
                      <label class="form-check-label">
                         <input class="form-check-input" type="checkbox" name="chkbox" <?php if ($bFeatured) {echo 'checked';} ?> > Featured project.
