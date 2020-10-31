@@ -64,13 +64,12 @@ if (isset($_SESSION['username']))
                            <a class="nav-link btn-color float-left" href="signIn.php">Login</a>
                            <a class="nav-link btn-color float-right" href="signUp.php">Register</a>
                         </div>
-                        
                         </span></li>';
                      }
                      else
                      {
-                        echo '<li class="nav-item"> 
-                        <span class="navbar-text">Welcome ' . $username  . '
+                        echo '<li class="nav-item float-right"> 
+                        <span class="navbar-text float-right btn-color">Welcome ' . $username  . '
                         <a class="nav-link btn-color float-right" href="signOut.php">Sign Out</a>
                         </span></li>';
                      }
