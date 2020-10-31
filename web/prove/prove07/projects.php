@@ -112,6 +112,9 @@ if (isset($_SESSION['username']))
       </div>
    </div> -->
 
+   <div class="jumbotron jumbotron-fluid banner2 tranparent">
+   </div>
+
    <!--Featured projects header-->
    <section class="about" id="about">
       <div class="container">
