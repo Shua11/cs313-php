@@ -129,8 +129,8 @@ if (isset($_SESSION['username']))
                      <a class="btn btn-danger btn-lg" onclick="submitForm('delete.php')"
                      role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
                   </div>
-                  <div id="errortext"></div>
                </div>
+               <div id="errortext"></div>
             </form>
          </div>
       </div>
