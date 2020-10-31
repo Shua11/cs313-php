@@ -92,7 +92,7 @@ p
 .navbar.scrolled
 {
     color: #000;
-    background: #fff !important;
+    background: #000 !important;
     /* transition: 0.5s; */
 }
 .navbar-brand.scrolled
