@@ -4,16 +4,14 @@ session_start();
 if (isset($_SESSION['username']))
 {
 	$username = $_SESSION['username'];
-} else {
-   header("Location: prove07.php");
 }
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-   <title>Manage Projects</title>
+   <title>Projects</title>
    <meta charset="utf-8">
    <meta name="application-name" content="Prove07">
    <meta name="description" content="Create a PHP application to  functionality related to inserting new data, updating existing data, and deleting from a database.">
@@ -35,10 +33,10 @@ if (isset($_SESSION['username']))
 </head>
 
 <body data-spy="scroll" data-target=".navbar" onload="onload();">
-<header>
+   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
          <div class="container">
-            <a class="navbar-brand" href="prove07.php"><img src="./images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
+            <a class="navbar-brand" href="#"><img src="./images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -46,7 +44,7 @@ if (isset($_SESSION['username']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-lg-auto">
                   <li class="nav-item">
-                     <a href="prove07.php" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
+                     <a href="#" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                      <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
@@ -82,41 +80,59 @@ if (isset($_SESSION['username']))
       </nav>
    </header>
 
-   <div class="jumbotron jumbotron-fluid banner2 tranparent">
-   </div>
-
-   <div class="container">
-      <div class="jumbotron tranparent8">
-         <div>
-               <h2>Manage Projects</h2>
-         </div>
-      </div>
-   </div>
-
-   <!-- Main body container -->
-   <div class="container">
-      <!-- Contact us form -->
-      <div class="jumbotron tranparent8 shift-down">
-         <div>
-               <h2>Add Project</h2>
-         </div>
-      </div>
-   </div>
-
-   <!-- Main body container -->
-   <div class="container">
-      <!-- Contact us form -->
-      <div class="jumbotron tranparent8 shift-down">
-         <div>
-            <h2>Edit/Delete Project</h2>
-         </div>
-      </div>
-   </div>
    
 
 
+   <!-- Spacing -->
+   <!-- <div class="jumbotron jumbotron-fluid banner tranparent">
+      <div class="container">
+         <div class="bannerBox">
+            <div class="shift-up">
+            </div>
+         </div>
+      </div>
+   </div> -->
 
+   <!-- SBA 8(a) Certification -->
+   <!-- <div class="container" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+      <div class="jumbotron tranparent8 shift-down">
+         <p class="lead">PRC Engineering is a privately-owned SBA 8(a) certified small business offering engineering and
+            consulting services to Federal, County, and State government agencies as well as private sector clientele.
+            Our core services include Water Resources, Site Development, Utilities (Water and Wastewater),
+            Transportation
+            and Energy Conservation.</p>
+         <hr class="my-4">
+         <div class="container-sm">
+            <img class="sba" src="./images/8a-logo.jpg">
+            <p>More information about the services we offer</p>
+            <a class="btn btn-primary btn-lg" href="/pdf/More-Information-about-the-services-we-offer.pdf"
+               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Learn
+               more</a>
+         </div>
+      </div>
+   </div> -->
 
+   <!--Featured projects header-->
+   <section class="about" id="about">
+      <div class="container">
+         <div class="row" data-aos="fade-in" data-aos-duration="1000">
+            <div class="offset-sm-2 col-sm-8">
+               <div class="hText">
+                  <h2 class="text-center">All Projects</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Featured project cards -->
+   <section class="featProj">
+      <div class="container">
+         <div class="card-deck">
+            <?php include 'queryDbProjects.php';?>
+         </div>
+      </div>
+   </section>
 
    <!-- Footer -->
    <footer>
@@ -124,6 +140,7 @@ if (isset($_SESSION['username']))
          <p>©Joshua Mathews | cse341 </p>
       </div>
    </footer>
+
 
    <!-- Bootstrap dependancies -->
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
