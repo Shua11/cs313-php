@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-$selected = $_POST['inputGroupSelect'];
+$selected = $_POST['inputSelect'];
    
 echo $selected;
 
-if (isset($_POST['inputGroupSelect']))
+if (isset($_POST['inputSelect']))
 {
-   $selected = $_POST['inputGroupSelect'];
+   $selected = $_POST['inputSelect'];
    
    echo ' isset';
 
