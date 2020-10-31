@@ -83,13 +83,18 @@ if (isset($_SESSION['username']))
    <div class="jumbotron jumbotron-fluid banner2 tranparent">
    </div>
 
-   <div class="container">
-      <div class="jumbotron tranparent8">
-         <div>
-               <h2>Manage Projects</h2>
+   <!--manage projects header-->
+   <section class="about" id="about">
+      <div class="container">
+         <div class="row" data-aos="fade-in" data-aos-duration="1000">
+            <div class="offset-sm-2 col-sm-8">
+               <div class="hText">
+                  <h2 class="text-center">Manage Projects</h2>
+               </div>
+            </div>
          </div>
       </div>
-   </div>
+   </section>
 
    <!-- Main body container -->
    <div class="container">
