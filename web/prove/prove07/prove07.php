@@ -44,15 +44,15 @@ if (isset($_SESSION['username']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-lg-auto">
                   <li class="nav-item">
-                     <a href="/" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
+                     <a href="#" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                     <a href="/projects" class="nav-link btn btn-color w-100">Projects</a>
+                     <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
                   </li>
                   <?php
-                     if (!isset($username) || $username == "")
+                     if (isset($username) || !$username == "")
                      { echo '<li class="nav-item">
-                        <a href="/manage-projects" class="nav-link btn btn-color w-100">Manage Projects</a>
+                        <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100">Manage Projects</a>
                      </li>';
                      }
                   ?>
@@ -65,9 +65,7 @@ if (isset($_SESSION['username']))
 
    <?php
       if (!isset($username) || $username == "")
-      { echo '<span class="float-right">Login to make project changes: 
-               <a class="nav-link" href="signIn.php">Login</a>
-               <a class="nav-link" href="signUp.php">Register</a>
+      { echo '<span class="float-right">Login to make project changes: <a class="nav-link" href="signIn.php">Login</a> <a class="nav-link" href="signUp.php">Register</a>
             </span>';
       }
       else
