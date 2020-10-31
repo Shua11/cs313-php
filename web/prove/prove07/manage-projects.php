@@ -97,8 +97,6 @@ if (isset($_SESSION['username']))
       <div class="jumbotron tranparent8 shift-down">
          <div>
                <h2>Add Project</h2>
-               <hr class="my-4">
-         <hr class="my-4">
       </div>
    </div>
 
@@ -108,8 +106,6 @@ if (isset($_SESSION['username']))
       <div class="jumbotron tranparent8 shift-down">
          <div>
                <h2>Edit/Delete Project</h2>
-               <hr class="my-4">
-         <hr class="my-4">
       </div>
    </div>
    
