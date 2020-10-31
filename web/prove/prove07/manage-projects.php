@@ -176,7 +176,7 @@ if (isset($_SESSION['username']))
          var selected = document.getElementById('inputGroupSelect').value;
          if (selected != "" || selected != null)
          {
-            alert("selected");
+            alert(selected);
             // form.action = action;
             // form.submit();
          }
