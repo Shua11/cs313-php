@@ -118,14 +118,14 @@ if (isset($_SESSION['username']))
          <div>
             <h2>Edit/Delete a Project</h2>
             <div class="input-group">
-               <select class="custom-select" id="inputGroupSelect04">
+               <select class="custom-select custom-select-lg" id="inputGroupSelect04">
                   <option selected>Choose...</option>
                   <?php include 'queryDbDropdown.php';?>
                </select>
                <div class="input-group-append">
-                  <a class="btn btn-primary" href=""
+                  <a class="btn btn-primary btn-lg" href=""
                   role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-                  <a class="btn btn-danger" href=""
+                  <a class="btn btn-danger btn-lg" href=""
                   role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
                </div>
             </div>
