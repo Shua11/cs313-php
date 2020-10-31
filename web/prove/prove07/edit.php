@@ -129,9 +129,9 @@ if (isset($_POST['inputSelect']))
       <!-- Contact us form -->
       <div class="jumbotron tranparent8 shift-down">
          <div>
-            <h2>Add a Project</h2>
+            <h2>Edit Project: <?php echo $project_name; ?></h2>
             <div class="container">
-               <p>Please fill out the form to add a project to the site.</p>
+               <p>Please edit the form to correct the project on the site.</p>
                <form action="upload.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                   <div class="form-group">
                      <label for="uname">Project Name:</label>
@@ -168,7 +168,7 @@ if (isset($_POST['inputSelect']))
 
                   <div class="form-group">
                      <label for="idesc">Project Image Description:</label>
-                     <input type="text" class="form-control" id="idesc" placeholder="Enter project image description" value=" <?php echo $bFeatured ?>" 
+                     <input type="text" class="form-control" id="idesc" placeholder="Enter project image description" value="<?php echo $project_image_description ?>" 
                         name="idesc" required>
                      <div class="valid-feedback">Valid.</div>
                      <div class="invalid-feedback">Please fill out this field.</div>
