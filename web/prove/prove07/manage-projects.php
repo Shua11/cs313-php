@@ -97,6 +97,7 @@ if (isset($_SESSION['username']))
       <div class="jumbotron tranparent8 shift-down">
          <div>
                <h2>Add Project</h2>
+         </div>
       </div>
    </div>
 
@@ -105,7 +106,8 @@ if (isset($_SESSION['username']))
       <!-- Contact us form -->
       <div class="jumbotron tranparent8 shift-down">
          <div>
-               <h2>Edit/Delete Project</h2>
+            <h2>Edit/Delete Project</h2>
+         </div>
       </div>
    </div>
    
