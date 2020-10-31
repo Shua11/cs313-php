@@ -123,6 +123,7 @@ if (isset($_SESSION['username']))
                      <option value="0" selected>Choose...</option>
                      <?php include 'queryDbDropdown.php';?>
                   </select>
+                  <div id="errortext"></div>
                   <div class="input-group-append">
                      <a class="btn btn-primary btn-lg" onclick="submitForm('edit.php')"
                      role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
@@ -176,9 +177,12 @@ if (isset($_SESSION['username']))
          var selected = document.getElementById('inputGroupSelect').value;
          if (selected != "0")
          {
-            alert(selected);
-            // form.action = action;
-            // form.submit();
+            // alert(selected);
+            form.action = action;
+            form.submit();
+         } else {
+            document.getElementById("errortext").innerHTML = "Please choose a project.";
+            document.getElementById("errortext").style.color = 'red';
          }
       }
    </script>
