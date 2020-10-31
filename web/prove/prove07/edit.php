@@ -7,13 +7,37 @@ if (isset($_SESSION['username']))
 } else {
    header("Location: prove07.php");
 }
+
+if (isset($_POST['inputSelect']))
+{
+   $selected = $_POST['inputSelect'];
+
+    // Connect to the DB
+	require "dbConnect.php";
+	$db = get_db();
+   $query = 'SELECT * FROM project WHERE id=:selected';
+
+	$statement = $db->prepare($query);
+	$statement->bindValue(':selected', $selected);
+	$statement->execute();
+
+	while ($pRow = $statement->fetch(PDO::FETCH_ASSOC))
+   {
+      $number = $pRow["id"];
+      $project_name = $pRow["project_name"];
+      $project_note = $pRow["project_note"];
+      $project_description = $pRow["project_description"];
+      $project_image = $pRow["project_image"];
+      $project_image_description = $pRow["project_image_description"];
+      $bFeatured = $pRow["bFeatured"];
+}
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-   <title>Manage Projects</title>
+   <title>Edit Project</title>
    <meta charset="utf-8">
    <meta name="application-name" content="Prove07">
    <meta name="description" content="Create a PHP application to  functionality related to inserting new data, updating existing data, and deleting from a database.">
@@ -89,7 +113,7 @@ if (isset($_SESSION['username']))
          <div class="row" data-aos="fade-in" data-aos-duration="1000">
             <div class="offset-sm-2 col-sm-8">
                <div class="hText">
-                  <h2 class="text-center">Manage Projects</h2>
+                  <h2 class="text-center">Edit Project</h2>
                </div>
             </div>
          </div>
@@ -102,44 +126,66 @@ if (isset($_SESSION['username']))
    <!-- Main body container -->
    <div class="container">
       <!-- Contact us form -->
-      <div class="jumbotron tranparent8">
+      <div class="jumbotron tranparent8 shift-down">
          <div>
-               <h2>Add a Project</h2>
-               <a class="btn btn-primary btn-lg" href="addproject.php"
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Opens in new tab">Add Project</a>
-         </div>
-      </div>
-   </div>
-
-   <!-- Main body container -->
-   <div class="container">
-      <!-- Contact us form -->
-      <div class="jumbotron tranparent8">
-         <div>
-            <h2>Edit/Delete a Project</h2>
-            <form method="post" id="form1">
-               <div class="input-group">
-                  <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect">
-                     <option selected>Choose...</option>
-                     <?php include 'queryDbDropdown.php';?>
-                  </select>
-                  <div class="input-group-append">
-                     <a class="btn btn-primary btn-lg" onclick="submitForm('edit.php')"
-                     role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-                     <a class="btn btn-danger btn-lg" onclick="submitForm('delete.php')"
-                     role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
+            <h2>Add a Project</h2>
+            <div class="container">
+               <p>Please fill out the form to add a project to the site.</p>
+               <form action="upload.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                  <div class="form-group">
+                     <label for="uname">Project Name:</label>
+                     <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" value="<?php echo $project_name; ?>"required>
+                     <div class="valid-feedback">Valid.</div>
+                     <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
-               </div>
-            </form>
+                  <div class="form-group">
+                     <label for="pnote">Project Note:</label>
+                     <input type="text" class="form-control" id="pnote" placeholder="Enter project note" name="pnote" required>
+                     <div class="valid-feedback">Valid.</div>
+                     <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="form-group">
+                     <label for="pdesc">Project Description:</label>
+                     <input type="textarea" class="form-control" id="pdesc" placeholder="Enter project description" name="pdesc"
+                        required>
+                     <div class="valid-feedback">Valid.</div>
+                     <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+
+                  <div class="form-group">
+                     <!-- <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div> -->
+                     <label for="fileToUpload">Project Image:</label>
+                     <div class="custom-file">
+                        <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload"
+                           aria-describedby="fileToUpload" required>
+                        <label class="custom-file-label" for="fileToUpload">Choose image</label>
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="idesc">Project Image Description:</label>
+                     <input type="text" class="form-control" id="idesc" placeholder="Enter project image description"
+                        name="idesc" required>
+                     <div class="valid-feedback">Valid.</div>
+                     <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+
+                  <div class="form-group form-check">
+                     <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="chkbox" > Featured project.
+                        <div class="valid-feedback">Valid.</div>
+                     </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+               </form>
+            </div>
          </div>
       </div>
    </div>
    
-
-
-
-
-
    <!-- Footer -->
    <footer>
       <div class="container">
@@ -167,15 +213,35 @@ if (isset($_SESSION['username']))
          $('.navbar-brand').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
       });
 
+      // Name of the file appears on select
+      $(".custom-file-input").on("change", function () {
+         var fileName = $(this).val().split("\\").pop();
+         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      });
+
+      // Disable form submissions if there are invalid fields
+      (function () {
+         'use strict';
+         window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+               form.addEventListener('submit', function (event) {
+                  if (form.checkValidity() === false) {
+                     event.preventDefault();
+                     event.stopPropagation();
+                     
+                  }
+                  form.classList.add('was-validated');
+               }, false);
+            });
+         }, false);
+      })();
+
       $(function () {
          $('[data-toggle="tooltip"]').tooltip()
       });
-
-      function submitForm(action) {
-         var form = document.getElementById('form1');
-         form.action = action;
-         form.submit();
-      }
    </script>
 </body>
 
