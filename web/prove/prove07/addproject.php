@@ -101,15 +101,12 @@ if (isset($_SESSION['username']))
          <div class="row" data-aos="fade-in" data-aos-duration="1000">
             <div class="offset-sm-2 col-sm-8">
                <div class="hText">
-                  <h2 class="text-center">Manage Projects</h2>
+                  <h2 class="text-center">Add Project</h2>
                </div>
             </div>
          </div>
       </div>
    </section>
-
-   <div class="jumbotron jumbotron-fluid banner2 tranparent">
-   </div>
 
    <!-- Main body container -->
    <div class="container">
@@ -118,7 +115,6 @@ if (isset($_SESSION['username']))
          <div>
             <h2>Add a Project</h2>
             <div class="container">
-               <h2>Add a Project</h2>
                <p>Please fill out the form to add a project to the site.</p>
                <form action="upload.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                   <div class="form-group">
@@ -174,22 +170,7 @@ if (isset($_SESSION['username']))
          </div>
       </div>
    </div>
-
-   <!-- Main body container -->
-   <div class="container">
-      <!-- Contact us form -->
-      <div class="jumbotron tranparent8 shift-down">
-         <div>
-            <h2>Edit/Delete a Project</h2>
-            <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-            <a class="btn btn-primary btn-lg" href=""
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
-         </div>
-      </div>
-   </div>
    
-
    <!-- Footer -->
    <footer>
       <div class="container">
