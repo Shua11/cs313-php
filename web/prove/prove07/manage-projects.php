@@ -123,11 +123,9 @@ if (isset($_SESSION['username']))
                   <?php include 'queryDbDropdown.php';?>
                </select>
                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Edit Project</button>
-                  <button class="btn btn-outline-secondary" type="button">Button</button>
-                  <a class="btn btn-primary btn-lg" href=""
+                  <a class="btn btn-primary" href=""
                   role="button" data-toggle="tooltip" data-placement="bottom" title="Edit the selected project">Edit Project</a>
-               <a class="btn btn-danger btn-lg" href=""
+                  <a class="btn btn-danger" href=""
                   role="button" data-toggle="tooltip" data-placement="bottom" title="Delete the selected project">Delete Project</a>
                </div>
             </div>
