@@ -104,7 +104,9 @@ if (isset($_SESSION['username']))
       <!-- Contact us form -->
       <div class="jumbotron tranparent8 shift-down">
          <div>
-               <h2>Add Project</h2>
+               <h2>Add a Project</h2>
+               <a class="btn btn-primary btn-lg" href="addproject.php"
+               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Add Project</a>
          </div>
       </div>
    </div>
@@ -114,7 +116,11 @@ if (isset($_SESSION['username']))
       <!-- Contact us form -->
       <div class="jumbotron tranparent8 shift-down">
          <div>
-            <h2>Edit/Delete Project</h2>
+            <h2>Edit/Delete a Project</h2>
+            <a class="btn btn-primary btn-lg" href="./pdf/More-Information-about-the-services-we-offer.pdf"
+               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Edit Project</a>
+            <a class="btn btn-primary btn-lg" href="./pdf/More-Information-about-the-services-we-offer.pdf"
+               target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Edit Project</a>
          </div>
       </div>
    </div>
