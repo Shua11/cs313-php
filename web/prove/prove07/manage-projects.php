@@ -102,7 +102,7 @@ if (isset($_SESSION['username']))
    <!-- Main body container -->
    <div class="container">
       <!-- Contact us form -->
-      <div class="jumbotron tranparent8 shift-down">
+      <div class="jumbotron tranparent8">
          <div>
                <h2>Add a Project</h2>
                <a class="btn btn-primary btn-lg" href="addproject.php"
