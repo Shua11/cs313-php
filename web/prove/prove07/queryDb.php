@@ -34,7 +34,7 @@
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalLabel">Academy Blvd. Bridge at Cottonwood Creek</h5>
+                  <h5 class="modal-title" id="ModalLabel">' . $project_name . '</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                   </button>
