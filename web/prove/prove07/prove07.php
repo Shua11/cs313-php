@@ -28,15 +28,15 @@ if (isset($_SESSION['username']))
    <link href="https://fonts.googleapis.com/css?family=Metamorphous|Swanky+and+Moo+Moo" rel="stylesheet">
 
    <!-- Custom Stylesheet -->
-   <link rel="stylesheet" type="text/css" href="prove06.css">
-   <script src="prove06.js"></script>
+   <link rel="stylesheet" type="text/css" href="prove07.css">
+   <script src="prove07.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" onload="onload();">
    <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
          <div class="container">
-            <a class="navbar-brand" href="#"><img src="/images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
+            <a class="navbar-brand" href="#"><img src="./images/PRC-logo.png" alt="Logo" style="height:100%;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,7 @@ if (isset($_SESSION['username']))
             and Energy Conservation.</p>
          <hr class="my-4">
          <div class="container-sm">
-            <img class="sba" src="/images/8a-logo.jpg">
+            <img class="sba" src="./images/8a-logo.jpg">
             <p>More information about the services we offer</p>
             <a class="btn btn-primary btn-lg" href="/pdf/More-Information-about-the-services-we-offer.pdf"
                target="_blank" role="button" data-toggle="tooltip" data-placement="right" title="Opens in new tab">Learn
