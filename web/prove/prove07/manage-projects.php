@@ -46,7 +46,7 @@ if (isset($_SESSION['username']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-lg-auto">
                   <li class="nav-item">
-                     <a href="prove07.php" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
+                     <a href="prove07.php" class="nav-link btn btn-color w-100">Home</a>
                   </li>
                   <li class="nav-item">
                      <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
@@ -54,11 +54,9 @@ if (isset($_SESSION['username']))
                   <?php
                      if (isset($username) || !$username == "")
                      { echo '<li class="nav-item">
-                        <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100">Manage Projects</a>
+                        <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100 active">Manage Projects <span class="sr-only">(current)</span></a>
                      </li>';
                      }
-                  ?>
-                  <?php
                      if (!isset($username) || $username == "")
                      { echo '<li class="nav-item float-right">
                         <span class="float-right btn-color align-middle">Login to make project changes: 

@@ -44,10 +44,10 @@ if (isset($_SESSION['username']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-lg-auto">
                   <li class="nav-item">
-                     <a href="prove07.php" class="nav-link btn btn-color w-100 active">Home <span class="sr-only">(current)</span></a>
+                     <a href="prove07.php" class="nav-link btn btn-color w-100 ">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
+                     <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100 active">Projects <span class="sr-only">(current)</span></a>
                   </li>
                   <?php
                      if (isset($username) || !$username == "")
