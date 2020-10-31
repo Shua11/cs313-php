@@ -1,0 +1,105 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Manage Projects</title>
+   <meta charset="utf-8">
+   <meta name="application-name" content="Prove07">
+   <meta name="description" content="Create a PHP application to  functionality related to inserting new data, updating existing data, and deleting from a database.">
+   <meta name="img" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap 4 Stylesheet -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+   <!-- Animations Stylesheet -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Metamorphous|Swanky+and+Moo+Moo" rel="stylesheet">
+
+   <!-- Custom Stylesheet -->
+   <link rel="stylesheet" type="text/css" href="prove07.css">
+   <script src="prove07.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" onload="onload();">
+
+
+   <div class="jumbotron jumbotron-fluid banner2 tranparent">
+   </div>
+
+   <div class="container">
+      <div class="jumbotron tranparent8">
+         <div>
+               <h2>Manage Projects</h2>
+         </div>
+      </div>
+   </div>
+
+   <!-- Main body container -->
+   <div class="container">
+      <!-- Contact us form -->
+      <div class="jumbotron tranparent8 shift-down">
+         <div>
+               <h2>Add Project</h2>
+               <hr class="my-4">
+         <hr class="my-4">
+      </div>
+   </div>
+
+   <!-- Main body container -->
+   <div class="container">
+      <!-- Contact us form -->
+      <div class="jumbotron tranparent8 shift-down">
+         <div>
+               <h2>Edit/Delete Project</h2>
+               <hr class="my-4">
+         <hr class="my-4">
+      </div>
+   </div>
+   
+
+
+
+
+
+   <!-- Footer -->
+   <footer>
+      <div class="container">
+         <p>©Joshua Mathews | cse341 </p>
+      </div>
+   </footer>
+
+   <!-- Bootstrap dependancies -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+   <!--Animations from https://github.com/michalsnik/aos-->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>AOS.init();</script>
+   <!-- Header magic -->
+   <script type="text/javascript">
+      $(document).scroll(function () {
+         $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+         $('.navbar-brand').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+      });
+   </script>
+</body>
+
+</html>

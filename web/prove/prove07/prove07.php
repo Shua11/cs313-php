@@ -70,8 +70,8 @@ if (isset($_SESSION['username']))
                      else
                      {
                         echo '<li class="nav-item"> 
-                        <span class="navbar-text">Welcome $username 
-                        <a href="signOut.php">Sign Out</a>
+                        <span class="navbar-text">Welcome ' . $username  . '
+                        <a class="nav-link btn-color float-right" href="signOut.php">Sign Out</a>
                         </span></li>';
                      }
                   ?>
@@ -130,102 +130,10 @@ if (isset($_SESSION['username']))
    <section class="featProj">
       <div class="container">
          <div class="card-deck">
-            <?php include 'queryDb.php';?>
+            <?php include 'queryDbFeatured.php';?>
          </div>
       </div>
    </section>
-
-   <!-- Modal1 -->
-   <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="ModalLabel">Academy Blvd. Bridge at Cottonwood Creek</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <div class="modal-body">
-               PRC was a member of the design team, led by CP&Y, Inc., responsible for the Grading, Erosion and
-               Stormwater
-               Quality Control Plan/Report (GESC). The GSEC included a narrative report describing erosion and
-               sedimentation
-               control during construction operations. Grading Plans, details and specifications for recommended control
-               measures (BMPs) were also included in the GESC to ensure effective erosion control and the preservation
-               of the
-               stormwater quality during the replacement of the bridge and construction of associated trail improvements
-               and
-               stream bank stabilization measures.
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- Modal2 -->
-   <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="ModalLabel">Westside Ave. Action Plan (WAAP)- West Colorado Ave. Design of
-                  Water
-                  and Sanitary Sewer Replacement</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <div class="modal-body">
-               PRC was responsible for the design of the Water Plans and Sanitary Sewer Replacement. PRC worked closely
-               with
-               Town of Manitou, Colorado Springs Utilities, El Paso County and Felsburg Holt & Ullevig (FHU), to prepare
-               Preliminary and Final Construction Documents. The improvements included replacement of 16-inch and
-               30-inch
-               waterlines as well as 12-inch sanitary sewer line replacement and sewer line rehabilitation (lining).
-               Many of
-               the existing utilities are very old and were not documented or accurately mapped when originally
-               constructed.
-               As such, PRC worked very closely with Wildcat Construction throughout the duration of the project to
-               address
-               unforeseen issues and to adjust designs when necessary.
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- Modal3 -->
-   <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="ModalLabel">Private Residence- 12 Random Rd. Pond maintenance and Bank
-                  Stabilization</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <div class="modal-body">
-               PRC was engaged by the homeowner to assist with a Floodplain Development Permit application. PRC worked
-               with
-               Bailey Professional Solutions (BPS) to conduct a survey of the existing conditions. PRC then developed
-               plans
-               and specifications for bank stabilization and the dredging of the existing pond. PRC prepared the
-               applications
-               required by Cherry Hills Village, the State Engineer's Office and the United States Army Corps of
-               Engineers.
-               PRC has great working relationships with these agencies and were able to meet with them and discuss the
-               implications of proposed improvements. After successful approvals from all stakeholders, the project was
-               completed. PRC also provided Construction Administrative Services until completion of the landscape
-               installation.
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-         </div>
-      </div>
-   </div>
 
    <!-- Footer -->
    <footer>
