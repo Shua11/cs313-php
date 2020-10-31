@@ -158,7 +158,7 @@ if (isset($_POST['inputSelect']))
                         <div class="input-group-prepend">
                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                         </div> -->
-                     <label for="fileToUpload">Project Image: value="<?php echo 'Previous Image: ' . $project_image; ?>"</label>
+                     <label for="fileToUpload">Project Image: <?php echo 'Previous Image: ' . $project_image; ?></label>
                      <div class="custom-file">
                         <input type="file" class="custom-file-input form-control" name="fileToUpload" id="fileToUpload"  
                            aria-describedby="fileToUpload" required>
@@ -176,7 +176,7 @@ if (isset($_POST['inputSelect']))
 
                   <div class="form-group form-check">
                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="chkbox" <?php if ($bFeatured) {echo 'checked=“checked”';} ?> > Featured project.
+                        <input class="form-check-input" type="checkbox" name="chkbox" <?php if ($bFeatured) {echo 'checked';} ?> > Featured project.
                         <div class="valid-feedback">Valid.</div>
                      </label>
                   </div>
