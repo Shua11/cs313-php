@@ -120,7 +120,7 @@ if (isset($_SESSION['username']))
             <form method="post" id="form1">
                <div class="input-group">
                   <select class="custom-select custom-select-lg" id="inputGroupSelect" name="inputSelect" required>
-                     <option selected>Choose...</option>
+                     <option value="" selected>Choose...</option>
                      <?php include 'queryDbDropdown.php';?>
                   </select>
                   <div class="input-group-append">
