@@ -70,7 +70,7 @@ if ($uploadOk == 0) {
       require("dbConnect.php");
       $db = get_db();
 
-      $query = 'UPDATE project SET project_name=:projectname, project_note=:projectnote, project_description=:projectdesc, project_image=:imagename, project_image_description=:imagedesc, bFeatured=:chkfeatured WHERE id=:selected';
+      $query = "UPDATE project SET project_name=':projectname', project_note=':projectnote', project_description=':projectdesc', project_image=':imagename', project_image_description=':imagedesc', bFeatured=':chkfeatured' WHERE id=:selected";
       $statement = $db->prepare($query);
       $statement->bindValue(':selected', $selected);
       $statement->bindValue(':projectname', $projectname);
@@ -81,8 +81,8 @@ if ($uploadOk == 0) {
       $statement->bindValue(':chkfeatured', $chkfeatured);
       $statement->execute();
 
-      header("Location: manage-projects.php");
-      die();
+      // header("Location: manage-projects.php");
+      // die();
 
 
 
