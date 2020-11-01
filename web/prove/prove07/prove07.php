@@ -11,7 +11,7 @@ if (isset($_SESSION['username']))
 <html lang="en">
 
 <head>
-   <title>Prove06</title>
+   <title>Prove07</title>
    <meta charset="utf-8">
    <meta name="application-name" content="Prove07">
    <meta name="description" content="Create a PHP application to  functionality related to inserting new data, updating existing data, and deleting from a database.">
@@ -161,7 +161,7 @@ if (isset($_SESSION['username']))
          $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
          $('.navbar-brand').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
       });
-      
+
       $(function () {
          $('[data-toggle="tooltip"]').tooltip()
       });

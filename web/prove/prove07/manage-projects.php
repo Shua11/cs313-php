@@ -106,7 +106,7 @@ if (isset($_SESSION['username']))
          <div>
                <h2>Add a Project</h2>
                <a class="btn btn-primary btn-lg" href="addproject.php"
-               role="button" data-toggle="tooltip" data-placement="bottom" title="Opens in new tab">Add Project</a>
+               role="button" data-toggle="tooltip" data-placement="bottom" title="Add a project to the site">Add Project</a>
          </div>
       </div>
    </div>
