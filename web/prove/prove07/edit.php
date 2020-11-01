@@ -180,6 +180,11 @@ if (isset($_POST['inputSelect']))
                         <div class="valid-feedback">Valid.</div>
                      </label>
                   </div>
+
+                  <div>
+                  <input type="hidden" name="selected" value="<?php echo $selected;?>">
+                  </div>
+
                   <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bpttom" title="Submit project changes">Submit</button>
                   <a class="btn btn-secondary" href="manage-projects.php"
                   role="button" data-toggle="tooltip" data-placement="right" title="Go back to Manage Projects">Cancel</a>

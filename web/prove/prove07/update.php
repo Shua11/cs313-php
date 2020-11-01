@@ -44,12 +44,9 @@ if ($uploadOk == 0) {
 } else {
    // if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
    //    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])) . " has been uploaded.";
-   if (isset($_POST['inputSelect']))
+   if (isset($_POST['selected']))
    {
-      $selected = $_POST['inputSelect'];
-   
-
-
+      $selected = $_POST['selected'];
       $projectname = $_POST['pname'];
       $projectnote = $_POST['pnote'];
       $projectdesc = $_POST['pdesc'];
