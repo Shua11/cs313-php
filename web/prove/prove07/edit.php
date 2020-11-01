@@ -132,7 +132,7 @@ if (isset($_POST['inputSelect']))
             <h2>Edit Project: <?php echo $project_name; ?></h2>
             <div class="container">
                <p>Please edit the form to correct the project on the site.</p>
-               <form action="upload.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+               <form action="update.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                   <div class="form-group">
                      <label for="uname">Project Name:</label>
                      <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" value="<?php echo $project_name; ?>" required>
