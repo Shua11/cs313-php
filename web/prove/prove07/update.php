@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -45,7 +47,7 @@ if ($uploadOk == 0) {
    if (isset($_POST['inputSelect']))
    {
       $selected = $_POST['inputSelect'];
-   }
+   
 
 
       $projectname = $_POST['pname'];
@@ -71,11 +73,17 @@ if ($uploadOk == 0) {
       $db = get_db();
 
       echo $projectname;
+      echo '<br>';
       echo $projectnote;
+      echo '<br>';
       echo $projectdesc;
+      echo '<br>';
       echo $imagename;
+      echo '<br>';
       echo $imagedesc;
+      echo '<br>';
       echo $selected;
+      echo '<br>';
 
 
       $query = 'UPDATE project SET project_name=:projectname WHERE id=:selected';
@@ -106,5 +114,6 @@ if ($uploadOk == 0) {
    //    echo "Sorry, there was an error uploading your file.";
    //    echo '<script>alert("Sorry, there was an error uploading your file.")</script>';
    // }
+   }
 }
 ?>
