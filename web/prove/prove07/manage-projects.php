@@ -51,12 +51,10 @@ if (isset($_SESSION['username']))
                   <li class="nav-item">
                      <a href="/prove/prove07/projects.php" class="nav-link btn btn-color w-100">Projects</a>
                   </li>
+                  <li class="nav-item">
+                     <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100 active">Manage Projects <span class="sr-only">(current)</span></a>
+                  </li>
                   <?php
-                     if (isset($username) || !$username == "")
-                     { echo '<li class="nav-item">
-                        <a href="/prove/prove07/manage-projects.php" class="nav-link btn btn-color w-100 active">Manage Projects <span class="sr-only">(current)</span></a>
-                     </li>';
-                     }
                      if (!isset($username) || $username == "")
                      { echo '<li class="nav-item float-right">
                         <span class="float-right btn-color align-middle">Login to make project changes: 
