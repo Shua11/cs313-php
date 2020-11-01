@@ -69,20 +69,6 @@ if ($uploadOk == 0) {
       require("dbConnect.php");
       $db = get_db();
 
-      echo $projectname;
-      echo '<br>';
-      echo $projectnote;
-      echo '<br>';
-      echo $projectdesc;
-      echo '<br>';
-      echo $imagename;
-      echo '<br>';
-      echo $imagedesc;
-      echo '<br>';
-      echo $selected;
-      echo '<br>';
-
-
       $query = 'UPDATE project SET project_name=:projectname WHERE id=:selected';
       $statement = $db->prepare($query);
       $statement->bindValue(':selected', $selected);
@@ -90,21 +76,19 @@ if ($uploadOk == 0) {
       $statement->execute();
 
 
-      // $query = "UPDATE project SET project_name=':projectname', project_note=':projectnote', project_description=':projectdesc', project_image=':imagename', project_image_description=':imagedesc', bFeatured=':chkfeatured' WHERE id=:selected";
-      // $statement = $db->prepare($query);
-      // $statement->bindValue(':selected', $selected);
-      // $statement->bindValue(':projectname', $projectname);
-      // $statement->bindValue(':projectnote', $projectnote);
-      // $statement->bindValue(':projectdesc', $projectdesc);
-      // $statement->bindValue(':imagename', $imagename);
-      // $statement->bindValue(':imagedesc', $imagedesc);
-      // $statement->bindValue(':chkfeatured', $chkfeatured);
-      // $statement->execute();
+      $query = "UPDATE project SET project_name=:projectname, project_note=:projectnote, project_description=:projectdesc, project_image=:imagename, project_image_description=:imagedesc, bFeatured=:chkfeatured WHERE id=:selected";
+      $statement = $db->prepare($query);
+      $statement->bindValue(':selected', $selected);
+      $statement->bindValue(':projectname', $projectname);
+      $statement->bindValue(':projectnote', $projectnote);
+      $statement->bindValue(':projectdesc', $projectdesc);
+      $statement->bindValue(':imagename', $imagename);
+      $statement->bindValue(':imagedesc', $imagedesc);
+      $statement->bindValue(':chkfeatured', $chkfeatured);
+      $statement->execute();
 
-      // header("Location: manage-projects.php");
-      // die();
-
-
+      header("Location: manage-projects.php");
+      die();
 
 
    // } else {
