@@ -70,7 +70,13 @@ if ($uploadOk == 0) {
       require("dbConnect.php");
       $db = get_db();
 
-      echo '<script>alert(' . $projectname . ')</script>'; 
+      echo $projectname;
+      echo $projectnote;
+      echo $projectdesc;
+      echo $imagename;
+      echo $imagedesc;
+      echo $selected;
+
 
       $query = 'UPDATE project SET project_name=:projectname WHERE id=:selected';
       $statement = $db->prepare($query);
